@@ -81,16 +81,32 @@ lost_boys = [
 
 children = ['Wendy', 'John', 'Michael']
 # Use .map to iterate through the children array and add Darling to the end of their names. Assign the returned array to a variable called darling_children. Example: Wendy should become Wendy Darling in the new array.
-darling_children = []
-children.map  do |child| 
-  full_name = child + " Darling"
-  darling_children.push(full_name)
-end
+
+# darling_children = []
+# children.map  do |child| 
+#   full_name = child + " Darling"
+#   darling_children.push(full_name)
+# end
 
 
 
 # Question 6
 # Define a Ruby class called Animal. Each Animal should have...
+class Animal
+
+  def set_name(name)
+    @name = name
+  end
+
+  def get_name
+    @name
+  end
+
+  def greet
+    puts "Hi, I'm #{name}"
+  end
+
+end
 # A name (String) attribute
 # A greet instance method
 # The ability to "get" and "set" name
