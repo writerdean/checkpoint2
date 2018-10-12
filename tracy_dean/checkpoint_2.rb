@@ -93,9 +93,12 @@ children = ['Wendy', 'John', 'Michael']
 # Question 6
 # Define a Ruby class called Animal. Each Animal should have...
 class Animal
+  def initialize(name)
+    @name = name  
+  end
 
-  def set_name(name)
-    @name = name
+  def set_name()
+
   end
 
   def get_name
@@ -111,10 +114,11 @@ end
 # A greet instance method
 # The ability to "get" and "set" name
 
-binding.pry
 # Question 7
 # Create a new Animal instance with the name "Pumba" an assign it to a variable named pumba.
+pumba = Animal.new("pumba")
 
+binding.pry
 # Question 8
 # Write a method called toonify that takes two parameters, accent and sentence.
 
