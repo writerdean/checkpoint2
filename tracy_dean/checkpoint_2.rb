@@ -30,8 +30,8 @@ town = {
 # Add "Belle" to the guests array Type your solution directly below this line:
 # town[:residents].delete[1]
 
-# town[:residents].delete("Belle")
-# town[:castle][:guests].push("Belle")
+town[:residents].delete("Belle")
+town[:castle][:guests].push("Belle")
 
 
 
@@ -48,9 +48,9 @@ friends = ["Chip Potts", "Cogsworth", "Lumière", "Mrs. Potts"]
 
 
 
-# friends.each do |name| 
-#   puts "Belle is friends with  #{name}"
-# end
+friends.each do |name| 
+  puts "Belle is friends with  #{name}"
+end
 
 
 
@@ -66,14 +66,10 @@ lost_boys = [
 ]
 # Use .each to iterate over the lost_boys array and increase each boy's age by 30 years.
 
-# lost_boys.each do |name, age| 
-#   age = age+30
-#   puts "#{name} is equal to #{age}"
-# end
-
-
-
-
+lost_boys.each do |name, age| 
+  age = age+30
+  puts "#{name} is equal to #{age}"
+end
 
 
 # Question 5
@@ -82,11 +78,11 @@ lost_boys = [
 children = ['Wendy', 'John', 'Michael']
 # Use .map to iterate through the children array and add Darling to the end of their names. Assign the returned array to a variable called darling_children. Example: Wendy should become Wendy Darling in the new array.
 
-# darling_children = []
-# children.map  do |child| 
-#   full_name = child + " Darling"
-#   darling_children.push(full_name)
-# end
+darling_children = []
+children.map  do |child| 
+  full_name = child + " Darling"
+  darling_children.push(full_name)
+end
 
 
 
@@ -129,3 +125,7 @@ binding.pry
 # toonify "daffy", "so you smell like sausage"
 # #=> "tho you thmell like thauthage"
 
+def toonify |accent, sentence|
+
+
+end
