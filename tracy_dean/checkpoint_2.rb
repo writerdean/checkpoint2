@@ -7,7 +7,7 @@ require 'pry'
 def offer_rose(name)
   puts "Would you take this rose, #{name}, in exchange for giving an old beggar woman shelter from the bitter cold?"
 end
-offer_rose("Robert")
+# offer_rose("Robert")
 
 
 
@@ -30,8 +30,8 @@ town = {
 # Add "Belle" to the guests array Type your solution directly below this line:
 # town[:residents].delete[1]
 
-town[:residents].delete("Belle")
-town[:castle][:guests].push("Belle")
+# town[:residents].delete("Belle")
+# town[:castle][:guests].push("Belle")
 
 
 
@@ -48,40 +48,54 @@ friends = ["Chip Potts", "Cogsworth", "Lumière", "Mrs. Potts"]
 
 
 
-friends.each do |name| 
-  puts "Belle is friends with  #{name}"
-end
-
-
+# friends.each do |name| 
+#   puts "Belle is friends with  #{name}"
+# end
 
 
 
 # Question 4
 # Assume the following array of hashes:
 
-# lost_boys = [
-#   {name: 'Tootles', age: 11},
-#   {name: 'Nibs', age: 9},
-#   {name: 'Slightly', age: 10},
-#   {name: 'Curly', age: 8},
-#   {name: 'The Twins', age: 9}
-# ]
+lost_boys = [
+  {name: 'Tootles', age: 11},
+  {name: 'Nibs', age: 9},
+  {name: 'Slightly', age: 10},
+  {name: 'Curly', age: 8},
+  {name: 'The Twins', age: 9}
+]
 # Use .each to iterate over the lost_boys array and increase each boy's age by 30 years.
 
+# lost_boys.each do |name, age| 
+#   age = age+30
+#   puts "#{name} is equal to #{age}"
+# end
 
-binding.pry
+
+
+
+
+
 # Question 5
 # Assume the following array:
 
-# children = ['Wendy', 'John', 'Michael']
+children = ['Wendy', 'John', 'Michael']
 # Use .map to iterate through the children array and add Darling to the end of their names. Assign the returned array to a variable called darling_children. Example: Wendy should become Wendy Darling in the new array.
+darling_children = []
+children.map  do |child| 
+  full_name = child + " Darling"
+  darling_children.push(full_name)
+end
+
+
 
 # Question 6
 # Define a Ruby class called Animal. Each Animal should have...
-
 # A name (String) attribute
 # A greet instance method
 # The ability to "get" and "set" name
+
+binding.pry
 # Question 7
 # Create a new Animal instance with the name "Pumba" an assign it to a variable named pumba.
 
@@ -94,3 +108,4 @@ binding.pry
 # If the accent is not recognized, just return the sentence as-is.
 # toonify "daffy", "so you smell like sausage"
 # #=> "tho you thmell like thauthage"
+
