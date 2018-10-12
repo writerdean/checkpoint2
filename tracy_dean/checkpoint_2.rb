@@ -38,7 +38,7 @@ town[:castle][:guests].push("Belle")
 # Question 3
 # Assume you have an array of strings representing friends' names...
 
-# friends = ["Chip Potts", "Cogsworth", "Lumière", "Mrs. Potts"]
+friends = ["Chip Potts", "Cogsworth", "Lumière", "Mrs. Potts"]
 # Using a loop and string interpolation, print each string in friends to the Terminal...
 
 # "Belle is friends with Chip Potts"
@@ -48,9 +48,14 @@ town[:castle][:guests].push("Belle")
 
 
 
+friends.each do |name| 
+  puts "Belle is friends with  #{name}"
+end
 
 
-binding.pry
+
+
+
 # Question 4
 # Assume the following array of hashes:
 
@@ -63,6 +68,8 @@ binding.pry
 # ]
 # Use .each to iterate over the lost_boys array and increase each boy's age by 30 years.
 
+
+binding.pry
 # Question 5
 # Assume the following array:
 
