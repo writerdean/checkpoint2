@@ -1,3 +1,6 @@
+require 'pry'
+
+
 # Question 1
 # Define a method called offer_rose, which should take one argument named person (String). When called the method should print to the terminal: "Would you take this rose, person, in exchange for giving an old beggar woman shelter from the bitter cold?"
 
@@ -11,18 +14,27 @@ offer_rose("Robert")
 # Question 2
 # Assume the following hash...
 
-# town = {
-#   residents: ["Maurice", "Belle", "Gaston"],
-#   castle: {
-#     num_rooms: 47,
-#     residents: ["Robby Benson"],
-#     guests: []
-#   }
-# }
+town = {
+  residents: ["Maurice", "Belle", "Gaston"],
+  castle: {
+    num_rooms: 47,
+    residents: ["Robby Benson"],
+    guests: []
+  }
+}
+
+
 # Using Ruby...
 
 # Remove "Belle" from residents
 # Add "Belle" to the guests array Type your solution directly below this line:
+# town[:residents].delete[1]
+
+town[:residents].delete("Belle")
+town[:castle][:guests].push("Belle")
+
+
+
 # Question 3
 # Assume you have an array of strings representing friends' names...
 
@@ -33,6 +45,12 @@ offer_rose("Robert")
 # "Belle is friends with Cogsworth"
 # "Belle is friends with Lumière"
 # "Belle is friends with Mrs. Potts"
+
+
+
+
+
+binding.pry
 # Question 4
 # Assume the following array of hashes:
 
