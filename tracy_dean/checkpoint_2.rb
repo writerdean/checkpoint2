@@ -48,9 +48,9 @@ friends = ["Chip Potts", "Cogsworth", "Lumière", "Mrs. Potts"]
 
 
 
-friends.each do |name| 
-  puts "Belle is friends with  #{name}"
-end
+# friends.each do |name| 
+#   puts "Belle is friends with  #{name}"
+# end
 
 
 
@@ -66,11 +66,17 @@ lost_boys = [
 ]
 # Use .each to iterate over the lost_boys array and increase each boy's age by 30 years.
 
-lost_boys.each do |name, age| 
-  age = age+30
-  puts "#{name} is equal to #{age}"
-end
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# lost_boys.each do |name| 
+#   age = age + 30
+#   puts "#{name} is equal to #{age}"
+# end
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+# lost_boys.each do |person|
+#     person[:age] = person[:age] + 30
+#     puts "#{person[:name]}: #{person[:age]}"
+#   end
 
 # Question 5
 # Assume the following array:
@@ -78,13 +84,21 @@ end
 children = ['Wendy', 'John', 'Michael']
 # Use .map to iterate through the children array and add Darling to the end of their names. Assign the returned array to a variable called darling_children. Example: Wendy should become Wendy Darling in the new array.
 
-darling_children = []
-children.map  do |child| 
-  full_name = child + " Darling"
-  darling_children.push(full_name)
-end
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# darling_children = []
+# children.map  do |child| 
+#   full_name = child + " Darling"
+#   darling_children.push(full_name)
+# end
+# 0.75 marks for not returning the full_name at the end of map when going through the darling_children. We shouldn't try to push into the darling_children array as `map` will create the new array for you.
+# XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
+# darling_children = children.map  {|child| child + " Darling"}
+
+
+
+# [1, 2, 3].map { |n| n * 2 }
 
 # Question 6
 # Define a Ruby class called Animal. Each Animal should have...
@@ -93,8 +107,8 @@ class Animal
     @name = name  
   end
 
-  def set_name()
-
+  def set_name(new_name)
+    @name = new_name
   end
 
   def get_name
@@ -114,7 +128,7 @@ end
 # Create a new Animal instance with the name "Pumba" an assign it to a variable named pumba.
 pumba = Animal.new("pumba")
 
-binding.pry
+
 # Question 8
 # Write a method called toonify that takes two parameters, accent and sentence.
 
@@ -125,7 +139,20 @@ binding.pry
 # toonify "daffy", "so you smell like sausage"
 # #=> "tho you thmell like thauthage"
 
-def toonify |accent, sentence|
+def toonify (accent, sentence)
+  if accent == "daffy"
+    puts sentence.gsub('s', 'th')
 
-
+  elsif accent = "elmer"
+    puts sentence.gsub('r', 'w')
+  
+  else
+    puts sentence
+  end
 end
+
+
+# toonify("daffy", "so you smell like sausage")
+# toonify("elmer", "the rabbit ran around the rosebush")
+
+binding.pry
